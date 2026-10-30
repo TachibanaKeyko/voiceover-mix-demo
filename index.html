@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Голос и музыка — демо сведения</title>
+<style>
+  :root { --bg:#111317; --card:#1a1d23; --line:#2a2e36; --text:#e8e9ec; --dim:#9aa0aa; --acc:#e0a96d; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif }
+  main { max-width:720px; margin:0 auto; padding:40px 20px 60px }
+  h1 { font-size:26px; margin:0 0 6px }
+  .sub { color:var(--dim); margin:0 0 28px }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 14px; margin-bottom:14px }
+  .card h2 { font-size:17px; margin:0 0 4px; display:flex; gap:10px; align-items:baseline }
+  .tag { font-size:12px; color:var(--acc); border:1px solid var(--acc); border-radius:20px; padding:1px 9px; font-weight:500 }
+  .card p { color:var(--dim); margin:0 0 12px; font-size:14.5px }
+  audio { width:100% }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px }
+  .row div { font-size:13px; color:var(--dim) }
+  h3 { font-size:15px; margin:30px 0 10px; color:var(--dim); font-weight:500 }
+  .specs { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:26px }
+  .specs div { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px; text-align:center }
+  .specs b { display:block; font-size:18px }
+  .specs span { color:var(--dim); font-size:12.5px }
+  @media (max-width:560px) { .row, .specs { grid-template-columns:1fr } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Голос и музыка — демо сведения</h1>
+  <p class="sub">Фрагмент 34 секунды на вашей записи, все версии в одной громкости, чтобы сравнивать честно</p>
+
+  <div class="card">
+    <h2>Исходник</h2>
+    <p>Голос поверх музыки без обработки, только выровнена громкость</p>
+    <audio controls preload="none" src="raw_mix.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <h2>Вариант 1 <span class="tag">естественный</span></h2>
+    <p>Убран бубнёж на 250 Гц, добавлены разборчивость и воздух сверху, двухступенчатая компрессия, де-эссер, лёгкая тёплая сатурация и короткая комната. Музыка плавно приседает под голос и отдаёт ему середину 1–4 кГц</p>
+    <audio controls preload="none" src="natural_mix.mp3"></audio>
+  </div>
+
+  <div class="card">
+    <h2>Вариант 2 <span class="tag">художественный</span></h2>
+    <p>Плотнее и теплее: параллельная сатурация, эксайтер, удвоение по сторонам, плейт и дилэй. Эффекты приглушены под словами и раскрываются в паузах, текст не размывается</p>
+    <audio controls preload="none" src="artistic_mix.mp3"></audio>
+  </div>
+
+  <h3>Голос отдельно</h3>
+  <div class="card">
+    <div class="row">
+      <div>Естественный<audio controls preload="none" src="natural_voice.mp3"></audio></div>
+      <div>Художественный<audio controls preload="none" src="artistic_voice.mp3"></audio></div>
+    </div>
+  </div>
+
+  <div class="specs">
+    <div><b>−14 LUFS</b><span>громкость под соцсети</span></div>
+    <div><b>−1.5 dBTP</b><span>запас по пику</span></div>
+    <div><b>WAV + MP3</b><span>трек и голос отдельно</span></div>
+  </div>
+</main>
+</body>
+</html>
